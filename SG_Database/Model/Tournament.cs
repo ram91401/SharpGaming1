@@ -4,7 +4,7 @@ using System.Text;
 
 namespace SG_Database.Model
 {
-    public class Tournaments
+    public class Tournament
     {
 
 

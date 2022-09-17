@@ -77,3 +77,10 @@ D:\SharpGaming\SharpGaming\obj\Debug\netcoreapp3.1\SharpGaming.csproj.CopyComple
 D:\SharpGaming\SharpGaming\obj\Debug\netcoreapp3.1\SharpGaming.dll
 D:\SharpGaming\SharpGaming\obj\Debug\netcoreapp3.1\SharpGaming.pdb
 D:\SharpGaming\SharpGaming\obj\Debug\netcoreapp3.1\SharpGaming.genruntimeconfig.cache
+D:\SharpGaming\SharpGaming\obj\Debug\netcoreapp3.1\SharpGaming.csproj.AssemblyReference.cache
+D:\SharpGaming\SharpGaming\bin\Debug\netcoreapp3.1\SG_Database.dll
+D:\SharpGaming\SharpGaming\bin\Debug\netcoreapp3.1\SG_Service.dll
+D:\SharpGaming\SharpGaming\bin\Debug\netcoreapp3.1\SG_VMModel.dll
+D:\SharpGaming\SharpGaming\bin\Debug\netcoreapp3.1\SG_Database.pdb
+D:\SharpGaming\SharpGaming\bin\Debug\netcoreapp3.1\SG_Service.pdb
+D:\SharpGaming\SharpGaming\bin\Debug\netcoreapp3.1\SG_VMModel.pdb

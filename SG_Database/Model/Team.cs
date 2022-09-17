@@ -4,8 +4,9 @@ using System.Text;
 
 namespace SG_Database.Model
 {
-    class Team
+    public class Team
     {
+        public int id { get; set; }
         public string home { get; set; }
         public string homeTranslation { get; set; }
         public string away { get; set; }

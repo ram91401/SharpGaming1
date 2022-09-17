@@ -9,5 +9,4 @@ D:\SharpGaming\SG_Database\obj\Debug\netcoreapp3.1\SG_Database.dll
 D:\SharpGaming\SG_Database\obj\Debug\netcoreapp3.1\SG_Database.pdb
 D:\SharpGaming\SG_Database\bin\Debug\netcoreapp3.1\SG_Database.runtimeconfig.json
 D:\SharpGaming\SG_Database\bin\Debug\netcoreapp3.1\SG_Database.runtimeconfig.dev.json
-D:\SharpGaming\SG_Database\obj\Debug\netcoreapp3.1\SG_Database.csproj.AssemblyReference.cache
 D:\SharpGaming\SG_Database\obj\Debug\netcoreapp3.1\SG_Database.genruntimeconfig.cache
