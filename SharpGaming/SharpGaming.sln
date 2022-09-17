@@ -3,13 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.32510.428
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SharpGaming", "SharpGaming.csproj", "{7CA84FF6-5518-4BF9-8E87-CB563640116C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SharpGaming", "SharpGaming.csproj", "{7CA84FF6-5518-4BF9-8E87-CB563640116C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SG_Service", "..\SG_Service\SG_Service.csproj", "{0696295F-8DA8-41CF-A3D0-4D3D9A547C7A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SG_Service", "..\SG_Service\SG_Service.csproj", "{0696295F-8DA8-41CF-A3D0-4D3D9A547C7A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SG_Database", "..\SG_Database\SG_Database.csproj", "{7EEE996E-6C34-46E3-8568-B2E9C89CFE82}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SG_Database", "..\SG_Database\SG_Database.csproj", "{7EEE996E-6C34-46E3-8568-B2E9C89CFE82}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SG_VMModel", "..\SG_VMModel\SG_VMModel.csproj", "{AB70A9B9-F8E8-4B18-864A-7CE025AEEDB6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SG_VMModel", "..\SG_VMModel\SG_VMModel.csproj", "{AB70A9B9-F8E8-4B18-864A-7CE025AEEDB6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hangfire", "..\Hangfire\Hangfire.csproj", "{8F940C7F-6C53-45B1-B884-69B822744B57}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{AB70A9B9-F8E8-4B18-864A-7CE025AEEDB6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AB70A9B9-F8E8-4B18-864A-7CE025AEEDB6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AB70A9B9-F8E8-4B18-864A-7CE025AEEDB6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8F940C7F-6C53-45B1-B884-69B822744B57}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8F940C7F-6C53-45B1-B884-69B822744B57}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8F940C7F-6C53-45B1-B884-69B822744B57}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8F940C7F-6C53-45B1-B884-69B822744B57}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

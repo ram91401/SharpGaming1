@@ -4,7 +4,7 @@ using System.Text;
 
 namespace SG_Service
 {
-    interface ISportService
+    public interface ISportService
     {
     }
 }
