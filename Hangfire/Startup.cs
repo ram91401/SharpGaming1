@@ -77,13 +77,13 @@ namespace Hangfire
             app.UseAuthorization();
             app.UseHangfireDashboard();
 
-            //backgroundJobClient.Enqueue(() => serviceProvider.GetService<ISportService>().InsertApiSportData());
-            //recurringJobManager.AddOrUpdate("Insert Api Country Data",
-            //    () => serviceProvider.GetService<ISportService>().InsertApiSportData(), Cron.Daily);
+            backgroundJobClient.Enqueue(() => serviceProvider.GetService<ISportService>().InsertApiSportData());
+            recurringJobManager.AddOrUpdate("Insert Api Country Data",
+                () => serviceProvider.GetService<ISportService>().InsertApiSportData(), Cron.Minutely);
 
             backgroundJobClient.Enqueue(() => serviceProvider.GetService<ICountryService>().InsertApiCountryData());
             recurringJobManager.AddOrUpdate("Insert Api Country Data ",
-                () => serviceProvider.GetService<ICountryService>().InsertApiCountryData(), Cron.Daily);
+                () => serviceProvider.GetService<ICountryService>().InsertApiCountryData(), Cron.Minutely);
 
             backgroundJobClient.Enqueue(() => Console.WriteLine("Hello, world!"));
 

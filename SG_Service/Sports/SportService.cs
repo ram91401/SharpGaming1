@@ -35,7 +35,7 @@ namespace SG_Service
                         translation = item.translation                       
                     };
 
-                    InsertSportData(sport);
+                    //InsertSportData(sport);
                 }
             }
         }
