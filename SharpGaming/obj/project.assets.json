@@ -1538,6 +1538,9 @@
       "SG_Service/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v3.1",
+        "dependencies": {
+          "SG_Database": "1.0.0"
+        },
         "compile": {
           "bin/placeholder/SG_Service.dll": {}
         },

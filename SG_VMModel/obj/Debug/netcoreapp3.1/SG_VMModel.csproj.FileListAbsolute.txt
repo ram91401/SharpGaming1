@@ -7,4 +7,3 @@ D:\SharpGaming\SG_VMModel\obj\Debug\netcoreapp3.1\SG_VMModel.AssemblyInfo.cs
 D:\SharpGaming\SG_VMModel\obj\Debug\netcoreapp3.1\SG_VMModel.csproj.CoreCompileInputs.cache
 D:\SharpGaming\SG_VMModel\obj\Debug\netcoreapp3.1\SG_VMModel.dll
 D:\SharpGaming\SG_VMModel\obj\Debug\netcoreapp3.1\SG_VMModel.pdb
-D:\SharpGaming\SG_VMModel\obj\Debug\netcoreapp3.1\SG_VMModel.csproj.AssemblyReference.cache

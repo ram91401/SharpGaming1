@@ -97,7 +97,11 @@
         "frameworks": {
           "netcoreapp3.1": {
             "targetAlias": "netcoreapp3.1",
-            "projectReferences": {}
+            "projectReferences": {
+              "D:\\SharpGaming\\SG_Database\\SG_Database.csproj": {
+                "projectPath": "D:\\SharpGaming\\SG_Database\\SG_Database.csproj"
+              }
+            }
           }
         },
         "warningProperties": {

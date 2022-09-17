@@ -10,6 +10,8 @@ namespace SG_Database.Model
         public string name { get; set; }
         public string translation { get; set; }
     }
+
+  
 }
 
 

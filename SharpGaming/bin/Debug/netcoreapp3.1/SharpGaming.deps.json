@@ -1413,6 +1413,9 @@
         }
       },
       "SG_Service/1.0.0": {
+        "dependencies": {
+          "SG_Database": "1.0.0"
+        },
         "runtime": {
           "SG_Service.dll": {}
         },

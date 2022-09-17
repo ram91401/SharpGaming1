@@ -4,4 +4,17 @@
     <TargetFramework>netcoreapp3.1</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <PackageReference Include="Hangfire.AspNetCore" Version="1.7.31" />
+    <PackageReference Include="Hangfire.Core" Version="1.7.31" />
+    <PackageReference Include="Hangfire.MemoryStorage" Version="1.7.0" />
+    <PackageReference Include="Hangfire.SqlServer" Version="1.7.31" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\SG_Database\SG_Database.csproj" />
+    <ProjectReference Include="..\SG_Service\SG_Service.csproj" />
+    <ProjectReference Include="..\SG_VMModel\SG_VMModel.csproj" />
+  </ItemGroup>
+
 </Project>

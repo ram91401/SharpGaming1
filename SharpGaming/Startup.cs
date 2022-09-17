@@ -5,6 +5,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using SG_Service;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -25,6 +26,9 @@ namespace SharpGaming
         {
             services.AddDbContext<ApplicationDbContext>(options =>options.UseSqlServer(Configuration.GetConnectionString("ConnStr")));
             services.AddControllersWithViews();
+
+            services.AddScoped<IUnitOfWork, UnitOfWork>();
+            services.AddTransient<ISportService, SportService>();            
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

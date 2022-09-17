@@ -8,6 +8,12 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Hangfire;
+using Hangfire.MemoryStorage;
+using Microsoft.AspNetCore.Http;
+using SG_Service;
+using SharpGaming;
+using Microsoft.EntityFrameworkCore;
 
 namespace Hangfire
 {
@@ -23,11 +29,35 @@ namespace Hangfire
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddDbContext<ApplicationDbContext>(options => options.UseSqlServer(Configuration.GetConnectionString("ConnStr")));
             services.AddControllersWithViews();
+
+            services.AddHangfire(config =>
+            config.SetDataCompatibilityLevel(CompatibilityLevel.Version_170)
+            .UseSimpleAssemblyNameTypeSerializer()
+            .UseDefaultTypeSerializer()
+            .UseMemoryStorage());
+
+            //services.AddHangfire(config => config.UseMemoryStorage());
+            services.AddHangfireServer();
+            services.Configure<CookiePolicyOptions>(options =>
+            {
+                // This lambda determines whether user consent for non-essential cookies is needed for a given request.
+                options.CheckConsentNeeded = context => true;
+                options.MinimumSameSitePolicy = SameSiteMode.None;
+            });
+
+            services.AddScoped<IUnitOfWork, UnitOfWork>();
+            services.AddTransient<ISportService, SportService>();
+            services.AddTransient<ICountryService, CountryService>();
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
+        public void Configure(IApplicationBuilder app, IWebHostEnvironment env,
+            IBackgroundJobClient backgroundJobClient,
+            IRecurringJobManager recurringJobManager,
+            IServiceProvider serviceProvider)
         {
             if (env.IsDevelopment())
             {
@@ -45,6 +75,17 @@ namespace Hangfire
             app.UseRouting();
 
             app.UseAuthorization();
+            app.UseHangfireDashboard();
+
+            //backgroundJobClient.Enqueue(() => serviceProvider.GetService<ISportService>().InsertApiSportData());
+            //recurringJobManager.AddOrUpdate("Insert Api Country Data",
+            //    () => serviceProvider.GetService<ISportService>().InsertApiSportData(), Cron.Daily);
+
+            backgroundJobClient.Enqueue(() => serviceProvider.GetService<ICountryService>().InsertApiCountryData());
+            recurringJobManager.AddOrUpdate("Insert Api Country Data ",
+                () => serviceProvider.GetService<ICountryService>().InsertApiCountryData(), Cron.Daily);
+
+            backgroundJobClient.Enqueue(() => Console.WriteLine("Hello, world!"));
 
             app.UseEndpoints(endpoints =>
             {
@@ -52,6 +93,8 @@ namespace Hangfire
                     name: "default",
                     pattern: "{controller=Home}/{action=Index}/{id?}");
             });
+
+          
         }
     }
 }
